@@ -6,6 +6,8 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+
+    <script src="Scripts/jquery_easyUI_dialog_form.js"></script>
 </head>
 <body>
     
