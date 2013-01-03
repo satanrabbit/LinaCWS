@@ -53,7 +53,12 @@
                             },
                             success: function (data) {
                                 data = $.parseJSON(data);
-                                $.messager.show({ title: "提示", msg: data.name, timeout: 2000 });
+                                if (data.status === 1) {
+                                    $.messager.show({ title: "提示", msg: data.msg, timeout: 2000 });
+                                    window.location.href = "/";
+                                } else {
+                                    $.messager.show({ title: "提示", msg: data.msg, timeout: 2000 });
+                                } 
                             }
                         });
                     }

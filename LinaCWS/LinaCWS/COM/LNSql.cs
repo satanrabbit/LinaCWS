@@ -10,9 +10,9 @@ namespace LinaCWS.COM
     /// <summary>
     /// 数据查询类
     /// </summary>
-    public class sql
+    public class LNSql
     {
-        public sql()
+        public LNSql()
         {
             connStr = ConfigurationManager.ConnectionStrings["CWSConnStr"].ConnectionString;
             conn = new OleDbConnection(connStr);
