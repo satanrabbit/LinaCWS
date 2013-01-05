@@ -1,21 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace LinaCWS
 {
-    public partial class _Default : System.Web.UI.Page
+    public partial class LogOut1 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["adminID"] == null)
-            {
-                
-                Response.Redirect("LogOn.aspx");
-                
-            }
+            Session.Abandon();
+            Response.Redirect("/");
         }
     }
 }

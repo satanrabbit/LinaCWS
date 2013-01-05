@@ -10,7 +10,6 @@
     <link href="Sources/jquery_easyui/themes/metro/easyui.css" rel="stylesheet" />
     <link href="Sources/jquery_easyui/themes/icon.css" rel="stylesheet" />
 
-
     <script src="Scripts/jquery-1.8.2.min.js"></script>
     <script src="Sources/jquery_easyui/jquery.easyui.min.js"></script>
     <script src="Sources/jquery_easyui/locale/easyui-lang-zh_CN.js"></script>

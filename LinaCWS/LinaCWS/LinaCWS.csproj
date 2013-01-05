@@ -58,6 +58,9 @@
     <Content Include="App_Data\CWSDB.mdb" />
     <Content Include="Default.aspx" />
     <Content Include="LogOn.aspx" />
+    <Content Include="LogOut.aspx" />
+    <Content Include="pay.aspx" />
+    <Content Include="rate.aspx" />
     <Content Include="Scripts\ajaxfileupload.js" />
     <Content Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
@@ -467,8 +470,16 @@
     <Content Include="Sources\jquery_easyui\themes\metro\tree.css" />
     <Content Include="Sources\jquery_easyui\themes\metro\validatebox.css" />
     <Content Include="Sources\jquery_easyui\themes\metro\window.css" />
+    <Content Include="userEdit.aspx" />
+    <Content Include="users.aspx" />
+    <Content Include="wages.aspx" />
+    <Content Include="wagesCount.aspx" />
+    <Content Include="work.aspx" />
+    <Content Include="workEdit.aspx" />
+    <Content Include="workerEdit.aspx" />
     <Content Include="Style\base.css" />
     <Content Include="Web.config" />
+    <Content Include="worker.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="COM\LNSql.cs" />
@@ -486,7 +497,102 @@
     <Compile Include="LogOn.aspx.designer.cs">
       <DependentUpon>LogOn.aspx</DependentUpon>
     </Compile>
+    <Compile Include="LogOut.aspx.cs">
+      <DependentUpon>LogOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogOut.aspx.designer.cs">
+      <DependentUpon>LogOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pay.aspx.cs">
+      <DependentUpon>pay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pay.aspx.designer.cs">
+      <DependentUpon>pay.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rate.aspx.cs">
+      <DependentUpon>rate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="rate.aspx.designer.cs">
+      <DependentUpon>rate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="userDelete.ashx.cs">
+      <DependentUpon>userDelete.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="userEdit.aspx.cs">
+      <DependentUpon>userEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userEdit.aspx.designer.cs">
+      <DependentUpon>userEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="userList.ashx.cs">
+      <DependentUpon>userList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="users.aspx.cs">
+      <DependentUpon>users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users.aspx.designer.cs">
+      <DependentUpon>users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wages.aspx.cs">
+      <DependentUpon>wages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wages.aspx.designer.cs">
+      <DependentUpon>wages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wagesCount.aspx.cs">
+      <DependentUpon>wagesCount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wagesCount.aspx.designer.cs">
+      <DependentUpon>wagesCount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wagesList.ashx.cs">
+      <DependentUpon>wagesList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="work.aspx.cs">
+      <DependentUpon>work.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="work.aspx.designer.cs">
+      <DependentUpon>work.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="workEdit.aspx.cs">
+      <DependentUpon>workEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="workEdit.aspx.designer.cs">
+      <DependentUpon>workEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="workerDelete.ashx.cs">
+      <DependentUpon>workerDelete.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="workerEdit.aspx.cs">
+      <DependentUpon>workerEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="workerEdit.aspx.designer.cs">
+      <DependentUpon>workerEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="worker.aspx.cs">
+      <DependentUpon>worker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="worker.aspx.designer.cs">
+      <DependentUpon>worker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="workerList.ashx.cs">
+      <DependentUpon>workerList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="workList.ashx.cs">
+      <DependentUpon>workList.ashx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -503,12 +609,18 @@
     <Content Include="Sources\jquery_easyui\demo\tree_data.json" />
     <Content Include="Sources\jquery_easyui\themes\default\images\Thumbs.db" />
     <Content Include="Sources\jquery_easyui\themes\gray\images\Thumbs.db" />
+    <Content Include="wagesList.ashx" />
+    <Content Include="userList.ashx" />
+    <Content Include="userDelete.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="workerList.ashx" />
+    <Content Include="workerDelete.ashx" />
+    <Content Include="workList.ashx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

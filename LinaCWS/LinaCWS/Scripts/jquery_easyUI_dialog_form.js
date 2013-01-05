@@ -1,4 +1,14 @@
 ﻿$.extend({
+   
+    /**
+     *  基于jQuery EasyUi的dialog内表单加载插件
+     * 
+     *  @author SatanRabbit -- xqx -- 夏千祥
+     *
+     *  url：加载表单HTML代码的地址
+     *  data：加载参数，title和form为关键字不可再用
+     *  data.title-dialog的Titile，data.form ：加载进来的表单ID，其他为提交参数。
+     */
     sr_edit_dialog: function (url, data, fn) {
         var u, d, f;
         if (arguments.length == 0) {
@@ -36,7 +46,16 @@
                 var fm;
                 if (d.title != null) {
                     dg.dialog({ title: d.title });
+                } else {
+                    dg.dialog({ title: "填写表单" });
                 }
+
+                if (d.maximized != null) {
+                    dg.dialog({ maximized: d.maximized });
+                } else {
+                    dg.dialog({ maximized: false });
+                }
+
                 //表单
                 if (d.form == null) {
                     fm = $('.sr_edit_dialog').find("form:first");
@@ -45,10 +64,10 @@
                 }
                 if (fm.length == 0) {
                     $.messager.alert("错误", "错误:<br /> 表单名-" + d.form + "不存在！", "error");
-                    $(".sr_edit_dialog").dialog('destroy').remove();
+                    //$(".sr_edit_dialog").dialog('destroy').remove();
                 } else {
                     dg.dialog({
-                        iconCls: 'icon-page_edit', modal: true, maximizable: true,maximized:true,  resizable: true,
+                        iconCls: 'icon-page_edit', modal: true,maximizable :true,  resizable: true,
                         top: 10,
                          
                         buttons: [{

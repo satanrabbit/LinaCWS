@@ -42,7 +42,7 @@ namespace LinaCWS
                     }
                     else
                     {
-                        msg = "密码错误！" + pwd;
+                        msg = "密码错误！"; //+ pwd;
                     }
                 }
                 else
